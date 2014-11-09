@@ -4,7 +4,10 @@
   "description": "a ionic-leancloud seed project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-less": "node_modules/.bin/lessc -x src/less/app.less www/css/app.min.css",
+    "watch": "node_modules/.bin/rewatch src/less/*.less -c 'npm run build-less'",
+    "dev": "npm run watch && ionic serve",
+    "start": "npm run watch && ionic serve"
   },
   "repository": {
     "type": "git",
@@ -20,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/turingou/ionic-leancloud/issues"
   },
-  "homepage": "https://github.com/turingou/ionic-leancloud"
+  "homepage": "https://github.com/turingou/ionic-leancloud",
+  "devDependencies": {
+    "less": "~1.7.3",
+    "uglify-js": "^2.4.15",
+    "rewatch": "~0.2.2"
+  }
 }
