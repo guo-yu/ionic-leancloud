@@ -27,7 +27,7 @@
         StatusBar.styleDefault();
 
       if (log)
-        log($ionicPlatform.device());
+        log($ionicPlatform);
     });
   }
 
