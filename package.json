@@ -6,8 +6,8 @@
   "scripts": {
     "build-less": "node_modules/.bin/lessc -x src/less/app.less www/css/app.min.css",
     "watch": "node_modules/.bin/rewatch src/less/*.less -c 'npm run build-less'",
-    "dev": "npm run watch && ionic serve",
-    "start": "npm run watch && ionic serve"
+    "dev": "ionic serve & npm run watch",
+    "start": "npm run dev"
   },
   "repository": {
     "type": "git",
