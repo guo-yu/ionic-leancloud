@@ -1,4 +1,11 @@
 ;(function(angular, debug) {
+  'use strict';
+  var log;
+
+  if (!angular)
+    throw new Error('Angular.js is required');
+  if (debug)
+    log = debug('ionic');
 
   angular
     .module('project', [
@@ -18,6 +25,9 @@
       // org.apache.cordova.statusbar required
       if (window.StatusBar)
         StatusBar.styleDefault();
+
+      if (log)
+        log($ionicPlatform.device());
     });
   }
 
