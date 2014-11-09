@@ -1,19 +1,30 @@
 ## ionic-leancloud ![NPM version](https://img.shields.io/npm/v/ionic-leancloud.svg?style=flat) 
 
-a ionic-leancloud seed project
+a ionic-leancloud seed project.
 
 ### Installation
 ```bash
 $ npm install ionic-leancloud
 ```
+Or 
 
-### Example
-```js
-var ionicLeancloud = require('ionic-leancloud');
+```bash
+$ git clone https://github.com/turingou/ionic-leancloud.git
+$ cd ionic-leancloud
+$ vi config.xml
+$ npm run dev
 ```
 
-### API
-check this file: `index.js`
+### Project Structure
+
+- `package.json`: Workflow based on NPM, instead of `gulp`
+- `config.xml`: Cordova config manifest
+- `src`
+  - `src/less`: scr less file folder
+- `www`: the app folder
+  - `www/lib`: front-end deps' folder
+  - `www/templates`: html templates folder
+- `resources`: icons and screens images
 
 ### Contributing
 - Fork this repo
